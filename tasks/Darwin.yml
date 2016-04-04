@@ -1,2 +1,3 @@
 ---
 # tasks file for ssh_server(On OSX)
+# SSH server is pre-installed in OSX.
