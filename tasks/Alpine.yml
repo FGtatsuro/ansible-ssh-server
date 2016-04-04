@@ -1,2 +1,4 @@
 ---
 # tasks file for ssh_server(On Alpine Linux)
+- name: Install SSH server with APK
+  apk: name=openssh update_cache=yes
