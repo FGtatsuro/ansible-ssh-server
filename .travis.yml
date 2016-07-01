@@ -6,6 +6,7 @@ matrix:
       language: generic
       env:
         - TARGET=localhost
+        - PYTHONPATH="/Library/Python/2.7/site-packages:$PYTHONPATH"
     - os: linux
       dist: trusty
       language: python
@@ -46,6 +47,7 @@ matrix:
 sudo: required
 
 install:
+  - sudo pip install -U setuptools
   - sudo pip install ansible
   # Resolve dependencies(When target role isn't installed via Ansible Galaxy, auto resolution of dependencies doesn't occur.)
   - ansible-galaxy install FGtatsuro.python-requirements
